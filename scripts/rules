@@ -1,0 +1,4 @@
+(connect "PulseAudio JACK Sink:front-left" "Calf Studio Gear:Equalizer 12 Band In #1")
+(connect "PulseAudio JACK Sink:front-right" "Calf Studio Gear:Equalizer 12 Band In #2")
+(connect "Calf Studio Gear:Equalizer 12 Band Out #1" "system:playback_1")
+(connect "Calf Studio Gear:Equalizer 12 Band Out #2" "system:playback_2")

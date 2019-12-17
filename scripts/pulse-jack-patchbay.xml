@@ -1,0 +1,29 @@
+<!DOCTYPE patchbay>
+<patchbay version="0.5.0" name="pulse-jack-patchbay">
+ <output-sockets>
+  <socket type="jack-audio" client="PulseAudio JACK Sink" exclusive="off" name="PulseAudio">
+   <plug>front-left</plug>
+   <plug>front-right</plug>
+  </socket>
+  <socket type="jack-audio" client="Calf Studio Gear" exclusive="off" name="Calf EQ">
+   <plug>Equalizer 12 Band Out #1</plug>
+   <plug>Equalizer 12 Band Out #2</plug>
+  </socket>
+ </output-sockets>
+ <input-sockets>
+  <socket type="jack-audio" client="Calf Studio Gear" exclusive="off" name="Calf EQ">
+   <plug>Equalizer 12 Band In #1</plug>
+   <plug>Equalizer 12 Band In #2</plug>
+  </socket>
+  <socket type="jack-audio" client="system" exclusive="off" name="Master">
+   <plug>playback_1</plug>
+   <plug>playback_2</plug>
+  </socket>
+ </input-sockets>
+ <slots/>
+ <cables>
+  <cable type="jack-audio" input="Calf EQ" output="PulseAudio"/>
+  <cable type="jack-audio" input="Master" output="Calf EQ"/>
+ </cables>
+</patchbay>
+
